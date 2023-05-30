@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCuadrado.MainPage"
+             xmlns:local ="clr-namespace:AppCuadrado.ViewModels"
+             >
+
+    <ContentPage.BindingContext>
+        <local:ViewModelCuadrado></local:ViewModelCuadrado>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+
+        <StackLayout>
+        
+        <Label Text="App"
+       FontSize="Large"
+       FontAttributes="Italic"
+       HorizontalTextAlignment="Center" />
+
+        <Label Text="Calculo de Area y Perimetro de Cuadrados"
+       FontSize="Large"
+       FontAttributes="Italic"
+       HorizontalTextAlignment="Center" />
+
+        <Entry Text="{Binding Lado}" Keyboard="Numeric"
+       Placeholder="Digite el valor de algun lado"
+       VerticalOptions="Start" />
+
+       <Button Command="{Binding crear}" Text="Calcular"  ></Button>
+
+        <Label Text="{Binding Resultado}"
+       FontSize="Large"
+       FontAttributes="Italic"
+       />
+
+        </StackLayout>
+
+  </ContentPage.Content>
+
+</ContentPage>
